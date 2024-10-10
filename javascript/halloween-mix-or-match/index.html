@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Halloween Mix-&-Match</title>
+
+    <!--===== CSS =====-->
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <!--===== JS =====-->
+    <script src="/assets/js/script.js" async></script>
+
+</head>
+
+<body>
+    <!--===== Main Title =====-->
+    <h1 class="page-title">Halloween Mix-&-Match</h1>
+
+    <!--===== Overlay Text =====-->
+    <div class="overlay-text visable">
+        Click to Start!
+    </div>
+
+    <!--===== Overlay Text : GAME OVER =====-->
+    <div class="overlay-text" id="game-over-text">
+        GAME OVER
+        <span class="overlay-text-small">Click to Restart</span>
+    </div>
+
+    <!--===== Overlay Text : VICTORY =====-->
+    <div class="overlay-text" id="game-over-text">
+        VICTORY
+        <span class="overlay-text-small">Click to Restart</span>
+    </div>
+
+    <!--==== Game Container ====-->
+    <div class="game-container">
+        <!--==== Game Information Display (time, flips) ====-->
+        <div class="game-info-container">
+            <div class="game-info">
+                Time <span id="time-remaining">100</span>
+            </div>
+            <div class="game-info">
+                Flips <span id="flips">0</span>
+            </div>
+        </div>
+        
+        <!--==== Card Elements - repeated for each card - 16 cards ====-->
+        <!--==== Each card has a black face and a front face ====-->
+        <!--=== Bat ====-->
+        <div class="card">
+            <!-- Back face of the card -->
+            <div class="card-face card-back">
+                <!-- Cobweb images for decoration -->
+                <img class="cob-web cob-web-top-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-top-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <!-- Spider image on the back of each card -->
+                <img class="spider" src="assets/img/Spider.png" alt="Spider">
+            </div>
+            <!-- Front face of the card -->
+            <div class="card-face card-front">
+                 <!-- Grey cobweb images for decoration -->
+                <img class="cob-web cob-web-top-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-top-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                 <!-- Unique card value image (e.g., Bat, Bones, Cauldron, etc.) -->
+                <img class="card-value" src="/assets/img/Bat.png" alt="Bat">
+            </div>
+        </div>
+        <div class="card">
+            <!-- Back face of the card -->
+            <div class="card-face card-back">
+                <!-- Cobweb images for decoration -->
+                <img class="cob-web cob-web-top-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-top-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <!-- Spider image on the back of each card -->
+                <img class="spider" src="assets/img/Spider.png" alt="Spider">
+            </div>
+            <!-- Front face of the card -->
+            <div class="card-face card-front">
+                 <!-- Grey cobweb images for decoration -->
+                <img class="cob-web cob-web-top-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-top-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                 <!-- Unique card value image (e.g., Bat, Bones, Cauldron, etc.) -->
+                <img class="card-value" src="/assets/img/Bat.png" alt="Bat">
+            </div>
+        </div>
+          <!--=== Bones ====-->
+        <div class="card">
+            <!-- Back face of the card -->
+            <div class="card-face card-back">
+                <!-- Cobweb images for decoration -->
+                <img class="cob-web cob-web-top-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-top-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <!-- Spider image on the back of each card -->
+                <img class="spider" src="assets/img/Spider.png" alt="Spider">
+            </div>
+            <!-- Front face of the card -->
+            <div class="card-face card-front">
+                 <!-- Grey cobweb images for decoration -->
+                <img class="cob-web cob-web-top-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-top-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                 <!-- Unique card value image (e.g., Bat, Bones, Cauldron, etc.) -->
+                 <img class="card-value" src="/assets/img/Bones.png" alt="Bones">
+            </div>
+        </div>
+        <div class="card">
+            <!-- Back face of the card -->
+            <div class="card-face card-back">
+                <!-- Cobweb images for decoration -->
+                <img class="cob-web cob-web-top-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-top-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <!-- Spider image on the back of each card -->
+                <img class="spider" src="assets/img/Spider.png" alt="Spider">
+            </div>
+            <!-- Front face of the card -->
+            <div class="card-face card-front">
+                 <!-- Grey cobweb images for decoration -->
+                <img class="cob-web cob-web-top-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-top-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                 <!-- Unique card value image (e.g., Bat, Bones, Cauldron, etc.) -->
+                 <img class="card-value" src="/assets/img/Bones.png" alt="Bones">
+            </div>
+        </div>
+        <!--=== Cauldron ====-->
+        <div class="card">
+            <!-- Back face of the card -->
+            <div class="card-face card-back">
+                <!-- Cobweb images for decoration -->
+                <img class="cob-web cob-web-top-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-top-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <!-- Spider image on the back of each card -->
+                <img class="spider" src="assets/img/Spider.png" alt="Spider">
+            </div>
+            <!-- Front face of the card -->
+            <div class="card-face card-front">
+                 <!-- Grey cobweb images for decoration -->
+                <img class="cob-web cob-web-top-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-top-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                 <!-- Unique card value image (e.g., Bat, Bones, Cauldron, etc.) -->
+                 <img class="card-value" src="/assets/img/Cauldron.png" alt="Cauldron">
+            </div>
+        </div>
+        <div class="card">
+            <!-- Back face of the card -->
+            <div class="card-face card-back">
+                <!-- Cobweb images for decoration -->
+                <img class="cob-web cob-web-top-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-top-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <!-- Spider image on the back of each card -->
+                <img class="spider" src="assets/img/Spider.png" alt="Spider">
+            </div>
+            <!-- Front face of the card -->
+            <div class="card-face card-front">
+                 <!-- Grey cobweb images for decoration -->
+                <img class="cob-web cob-web-top-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-top-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                 <!-- Unique card value image (e.g., Bat, Bones, Cauldron, etc.) -->
+                 <img class="card-value" src="/assets/img/Cauldron.png" alt="Cauldron">
+            </div>
+        </div>
+        <!--=== Eye ====-->
+        <div class="card">
+            <!-- Back face of the card -->
+            <div class="card-face card-back">
+                <!-- Cobweb images for decoration -->
+                <img class="cob-web cob-web-top-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-top-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <!-- Spider image on the back of each card -->
+                <img class="spider" src="assets/img/Spider.png" alt="Spider">
+            </div>
+            <!-- Front face of the card -->
+            <div class="card-face card-front">
+                 <!-- Grey cobweb images for decoration -->
+                <img class="cob-web cob-web-top-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-top-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                 <!-- Unique card value image (e.g., Bat, Bones, Cauldron, etc.) -->
+                 <img class="card-value" src="/assets/img/Eye.png" alt="Eye">
+            </div>
+        </div>
+        <div class="card">
+            <!-- Back face of the card -->
+            <div class="card-face card-back">
+                <!-- Cobweb images for decoration -->
+                <img class="cob-web cob-web-top-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-top-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <!-- Spider image on the back of each card -->
+                <img class="spider" src="assets/img/Spider.png" alt="Spider">
+            </div>
+            <!-- Front face of the card -->
+            <div class="card-face card-front">
+                 <!-- Grey cobweb images for decoration -->
+                <img class="cob-web cob-web-top-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-top-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                 <!-- Unique card value image (e.g., Bat, Bones, Cauldron, etc.) -->
+                 <img class="card-value" src="/assets/img/Eye.png" alt="Eye">
+            </div>
+        </div>
+        <!--=== Skull ====-->
+        <div class="card">
+            <!-- Back face of the card -->
+            <div class="card-face card-back">
+                <!-- Cobweb images for decoration -->
+                <img class="cob-web cob-web-top-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-top-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <!-- Spider image on the back of each card -->
+                <img class="spider" src="assets/img/Spider.png" alt="Spider">
+            </div>
+            <!-- Front face of the card -->
+            <div class="card-face card-front">
+                 <!-- Grey cobweb images for decoration -->
+                <img class="cob-web cob-web-top-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-top-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                 <!-- Unique card value image (e.g., Bat, Bones, Cauldron, etc.) -->
+                 <img class="card-value" src="/assets/img/Skull.png" alt="Skull">
+            </div>
+        </div>
+        <div class="card">
+            <!-- Back face of the card -->
+            <div class="card-face card-back">
+                <!-- Cobweb images for decoration -->
+                <img class="cob-web cob-web-top-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-top-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <!-- Spider image on the back of each card -->
+                <img class="spider" src="assets/img/Spider.png" alt="Spider">
+            </div>
+            <!-- Front face of the card -->
+            <div class="card-face card-front">
+                 <!-- Grey cobweb images for decoration -->
+                <img class="cob-web cob-web-top-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-top-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                 <!-- Unique card value image (e.g., Bat, Bones, Cauldron, etc.) -->
+                 <img class="card-value" src="/assets/img/Skull.png" alt="Skull">
+            </div>
+        </div>
+        <!--=== Pumpkin ====-->        
+        <div class="card">
+            <!-- Back face of the card -->
+            <div class="card-face card-back">
+                <!-- Cobweb images for decoration -->
+                <img class="cob-web cob-web-top-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-top-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <!-- Spider image on the back of each card -->
+                <img class="spider" src="assets/img/Spider.png" alt="Spider">
+            </div>
+            <!-- Front face of the card -->
+            <div class="card-face card-front">
+                 <!-- Grey cobweb images for decoration -->
+                <img class="cob-web cob-web-top-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-top-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                 <!-- Unique card value image (e.g., Bat, Bones, Cauldron, etc.) -->
+                 <img class="card-value" src="/assets/img/Pumpkin.png" alt="Pumpkin">
+            </div>
+        </div>
+        <div class="card">
+            <!-- Back face of the card -->
+            <div class="card-face card-back">
+                <!-- Cobweb images for decoration -->
+                <img class="cob-web cob-web-top-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-top-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <!-- Spider image on the back of each card -->
+                <img class="spider" src="assets/img/Spider.png" alt="Spider">
+            </div>
+            <!-- Front face of the card -->
+            <div class="card-face card-front">
+                 <!-- Grey cobweb images for decoration -->
+                <img class="cob-web cob-web-top-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-top-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                 <!-- Unique card value image (e.g., Bat, Bones, Cauldron, etc.) -->
+                 <img class="card-value" src="/assets/img/Pumpkin.png" alt="Pumpkin">
+            </div>
+        </div>
+        <!--=== Ghost ====-->
+        <div class="card">
+            <!-- Back face of the card -->
+            <div class="card-face card-back">
+                <!-- Cobweb images for decoration -->
+                <img class="cob-web cob-web-top-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-top-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <!-- Spider image on the back of each card -->
+                <img class="spider" src="assets/img/Spider.png" alt="Spider">
+            </div>
+            <!-- Front face of the card -->
+            <div class="card-face card-front">
+                 <!-- Grey cobweb images for decoration -->
+                <img class="cob-web cob-web-top-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-top-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                 <!-- Unique card value image (e.g., Bat, Bones, Cauldron, etc.) -->
+                 <img class="card-value" src="/assets/img/Ghost.png" alt="Ghost">
+            </div>
+        </div>
+        <div class="card">
+            <!-- Back face of the card -->
+            <div class="card-face card-back">
+                <!-- Cobweb images for decoration -->
+                <img class="cob-web cob-web-top-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-top-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <!-- Spider image on the back of each card -->
+                <img class="spider" src="assets/img/Spider.png" alt="Spider">
+            </div>
+            <!-- Front face of the card -->
+            <div class="card-face card-front">
+                 <!-- Grey cobweb images for decoration -->
+                <img class="cob-web cob-web-top-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-top-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                 <!-- Unique card value image (e.g., Bat, Bones, Cauldron, etc.) -->
+                 <img class="card-value" src="/assets/img/Ghost.png" alt="Ghost">
+            </div>
+        </div>
+        <!--=== Dracula ====-->
+        <div class="card">
+            <!-- Back face of the card -->
+            <div class="card-face card-back">
+                <!-- Cobweb images for decoration -->
+                <img class="cob-web cob-web-top-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-top-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <!-- Spider image on the back of each card -->
+                <img class="spider" src="assets/img/Spider.png" alt="Spider">
+            </div>
+            <!-- Front face of the card -->
+            <div class="card-face card-front">
+                 <!-- Grey cobweb images for decoration -->
+                <img class="cob-web cob-web-top-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-top-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                 <!-- Unique card value image (e.g., Bat, Bones, Cauldron, etc.) -->
+                 <img class="card-value" src="/assets/img/Dracula.png" alt="Dracula">
+            </div>
+        </div>
+        <div class="card">
+            <!-- Back face of the card -->
+            <div class="card-face card-back">
+                <!-- Cobweb images for decoration -->
+                <img class="cob-web cob-web-top-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-top-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <!-- Spider image on the back of each card -->
+                <img class="spider" src="assets/img/Spider.png" alt="Spider">
+            </div>
+            <!-- Front face of the card -->
+            <div class="card-face card-front">
+                 <!-- Grey cobweb images for decoration -->
+                <img class="cob-web cob-web-top-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-top-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-left" src="/assets/img/Cobweb.png" alt="Cobweb">
+                <img class="cob-web cob-web-bottom-right" src="/assets/img/Cobweb.png" alt="Cobweb">
+                 <!-- Unique card value image (e.g., Bat, Bones, Cauldron, etc.) -->
+                 <img class="card-value" src="/assets/img/Dracula.png" alt="Dracula">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
