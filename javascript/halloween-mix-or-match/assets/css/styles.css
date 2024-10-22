@@ -155,3 +155,51 @@ body{
     border-color: #333333;
     transform: rotateY(180deg);
 }
+
+.overlay-text {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    display: none;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #ff6d00;
+    font-family: Creepy, serif;
+    transition: background-color 500ms, font-size 500ms;
+}
+
+.overlay-text-small {
+    font-size: 0.3em;
+}
+
+.overlay-text.visable {
+    display: flex;
+    animation: overlay-grow 500ms forwards;
+}
+
+@keyframes dance {
+    0%, 100% {
+        tranform: rotate(0);
+    }
+    25% {
+        transform: rotate(-30deg);
+    }
+    75% {
+        transform: rotate(30deg);
+    }
+}
+
+@keyframes overlay-grow {
+    from {
+        background-color: rgba(0,0,0,0);
+        font-size: 0;
+    }
+    to {
+        background-color: rgba(0, 0, 0, 0.8);
+        font-size: 10em;
+    }
+}
