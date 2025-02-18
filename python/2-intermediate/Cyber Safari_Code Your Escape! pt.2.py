@@ -4,12 +4,12 @@
 # Story Prompt:
 # You're on a school field trip to the prestigious Technos Institute, a cutting-edge research facility
 # known for its incredible virtual reality simulations. Today's adventure: a cyber safari through the
-# heart of a digital jungle! But something goes wrong. The simulation malfunctions, trapping you
+# heart of a digital jungle! But something goes wrong. The simulation malfunctions, trapping you
 # inside the program.
 # Here's where your coding skills come in! You need to solve puzzles and write Python code to navigate
 # the virtual jungle, escape dangers, and find your way back to the real world.
 
-# Intermediate / Advanced
+# Importing the random module for generating random choices or outcomes
 import random
 
 
@@ -24,8 +24,7 @@ print("A frog the size of you comes up beside you and uses the lily pads to cros
 print("Except you watch as the frog lands on a slightly damaged lily pad and falls into the water.")
 print("There are safe lily pads and unsafe lily pads.")
 
-
-# Function to determine safe lilypads. This function simulates randomly generated safe and unsafe pads
+# Function to determine safe lily pads. This function simulates randomly generated safe and unsafe pads
 # for the player to hop across the river.
 def cross_river(num_pads):
   """
@@ -45,11 +44,10 @@ def cross_river(num_pads):
     is_safe = random.randint(0, 1)
     if is_safe:
       safe_sequence.append(i + 1)
-      print("Hop to pad", i + 1)
+      print("Hop to pad", i + 1)  # Instruction to hop on a safe pad
     else:
-      print("Avoid pad", i + 1)
-  return safe_sequence
-
+      print("Avoid pad", i + 1)  # Instruction to avoid an unsafe pad
+  return safe_sequence  # Return the list of safe pads
 
 # Get the number of lily pads from the user
 num_pads = int(input("How many lily pads can you see? > "))
@@ -71,7 +69,6 @@ print("But your peace is shattered by a screech! A troop of mischievous monkeys 
 print("snatching your backpack containing your supplies!")
 print("Those pesky monkeys! You need to get your backpack back!")
 
-
 # Function to retrieve backpack. This function simulates a series of attempts to retrieve the backpack
 # from the monkeys. There's a random chance of success on each attempt.
 def retrieve_backpack(num_attempts):
@@ -82,15 +79,15 @@ def retrieve_backpack(num_attempts):
   Args:
       num_attempts: The number of times the player tries to retrieve the backpack.
   """
-  backpack_recovered = False
+  backpack_recovered = False  # Variable to track if the backpack is successfully recovered
   for attempt in range(num_attempts):
     # Simulate a range of chance success (0 for failure and 1 for success)
     success = random.randint(0, 1)
     if success:
-      backpack_recovered = True
+      backpack_recovered = True  # Mark as successful if the backpack is recovered
       break  # Exit loop if successful
     else:
-      print("Attempt", attempt + 1, ": The monkeys are too quick! Try again.")
+      print("Attempt", attempt + 1, ": The monkeys are too quick! Try again.")  # If unsuccessful
   if backpack_recovered:
     print("Success! You outsmarted the monkeys and retrieved your backpack")
   else:
@@ -102,7 +99,7 @@ num_attempts = int(input("How many attempts will you try to retrieve your backpa
 # Call retrieve_backpack with user input
 retrieve_backpack(num_attempts)
 
-print("\nHaving crossed the trecherous river and recieved your backpack,"
+print("\nHaving crossed the treacherous river and received your backpack,"
       "you continue your exploration of the digital jungle.")
 
 # Next part of the journey
@@ -113,7 +110,7 @@ print("To your left, a narrow passage disappears into darkness."
       "To your right, a winding staircase spirals upwards.")
 print("You need to find a way inside the temple. What will you do?")
 
-
+# Function to explore the temple based on user choice (left or right)
 def explore_temple(choice):
   """
   This function explores the temple based on the user's choice (left or right).
@@ -128,21 +125,21 @@ def explore_temple(choice):
     print("You cautiously enter the dark passage. The air grows thick and stale as you delve deeper.")
     print("After some time, you reach a dead end. A single, ornately carved chest sits in the dust.")
 
-    found_key = False
+    found_key = False  # Variable to track if the key is found
     for attempt in range(3):
-      for code in range(1000):  # Adjust for difficulty
+      for code in range(1000):  # Adjust for difficulty in cracking the code
         # Simulate random chance of correct attempts
         if random.randint(0, 1):
-          found_key = True
+          found_key = True  # Key found if the code is cracked
           print(f"Attempt: {attempt+1}, Code {code}: Success! You pry open the chest.")
           break  # Break inner loop if successful
         else:
-          print(f"Attempt: {attempt+1}, Code {code}: The lock remains stubbornly shut.")
+          print(f"Attempt: {attempt+1}, Code {code}: The lock remains stubbornly shut.")  # If unsuccessful
       if found_key:
         break  # Exit outer loop if key is found
     if found_key:
       print("Inside the chest, nestled in velvet, lies a gleaming gold key.")
-      return True  # Return if key is found
+      return True  # Return True if key is found
     else:
       print("Disappointed, you turn back. The chest held no key to open the temple doors.")
       return False  # Return False if key is not found
@@ -158,7 +155,7 @@ def explore_temple(choice):
       print("The keyhole is empty. You must find a key to unlock this door. Perhaps the dark passage holds the answer?")
       return False  # Return False if no key
   else:
-    print("That's not a valid choice. Try 'left' or 'right'.")
+    print("That's not a valid choice. Try 'left' or 'right'.")  # Handle invalid input
     return explore_temple(input("Choose again: "))  # Recursively call function for invalid input
 
 # Flag to track if the key is found from the chest

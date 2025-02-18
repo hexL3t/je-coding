@@ -1,24 +1,25 @@
 import random
 import time
 
+# Character class to represent the player's character
 class Character:
     def __init__(self, name, health, attack):
         # Initialize character attributes
         self.name = name
-        self.max_health = health
-        self.health = health
-        self.base_attack = attack
-        self.gold = 0
-        self.inventory = []
-        self.level = 1
-        self.exp = 0
+        self.max_health = health  # Max health of the character
+        self.health = health      # Current health of the character
+        self.base_attack = attack # Base attack power of the character
+        self.gold = 0             # Gold the character has collected
+        self.inventory = []       # List of items the character owns
+        self.level = 1            # Starting level of the character
+        self.exp = 0              # Starting experience points of the character
 
     def is_alive(self):
-        # Check if the character is still alive
+        # Check if the character is still alive (health > 0)
         return self.health > 0
 
     def take_damage(self, damage):
-        # Reduce health when taking damage, ensure it doesn't go below 0
+        # Reduce health when taking damage, ensuring it doesn't go below 0
         self.health -= damage
         if self.health < 0:
             self.health = 0
@@ -28,20 +29,20 @@ class Character:
         self.health = min(self.health + amount, self.max_health)
 
     def get_attack_damage(self):
-        # Calculate a random attack damage within a range
+        # Calculate a random attack damage within a range around base_attack
         return random.randint(self.base_attack - 2, self.base_attack + 2)
 
     def gain_exp(self, amount):
-        # Gain experience and level up if enough exp is accumulated
+        # Gain experience points and level up if enough experience is accumulated
         self.exp += amount
-        if self.exp >= self.level * 100:
+        if self.exp >= self.level * 100:  # Check if enough exp to level up
             self.level_up()
 
     def level_up(self):
         # Increase character stats upon leveling up
         self.level += 1
         self.max_health += 10
-        self.health = self.max_health
+        self.health = self.max_health  # Reset health to max after level up
         self.base_attack += 2
         self.exp = 0
         print(f"\nCongratulations! You've leveled up to level {self.level}!")
@@ -57,6 +58,7 @@ class Character:
         # Return a string containing all character stats
         return f"{self.name} - Level: {self.level}, Health: {self.health}/{self.max_health}, Attack: {self.base_attack}, Gold: {self.gold}, EXP: {self.exp}/{self.level * 100}"
 
+# Enemy class to represent enemies in the game
 class Enemy:
     def __init__(self, name, health, attack, gold_reward, exp_reward):
         # Initialize enemy attributes
@@ -67,35 +69,37 @@ class Enemy:
         self.exp_reward = exp_reward
 
     def is_alive(self):
-        # Check if the enemy is still alive
+        # Check if the enemy is still alive (health > 0)
         return self.health > 0
 
     def take_damage(self, damage):
-        # Reduce health when taking damage, ensure it doesn't go below 0
+        # Reduce health when taking damage, ensuring it doesn't go below 0
         self.health -= damage
         if self.health < 0:
             self.health = 0
 
     def get_attack_damage(self):
-        # Calculate a random attack damage within a range
+        # Calculate a random attack damage within a range around enemy's attack
         return random.randint(self.attack - 1, self.attack + 1)
 
+# Function to create a new character with user input
 def create_character():
     # Prompt user for character name and create a new Character instance
     name = input("Enter your character's name: ")
     return Character(name, health=100, attack=10)
 
+# Function to create a new enemy based on the player's level
 def create_enemy(player_level):
-    # Define possible enemy types
+    # Define possible enemy types with their stats
     enemies = [
         {"name": "Goblin", "health": 30, "attack": 5, "gold": 10, "exp": 20},
         {"name": "Orc", "health": 50, "attack": 8, "gold": 20, "exp": 35},
         {"name": "Troll", "health": 80, "attack": 12, "gold": 35, "exp": 60},
         {"name": "Dragon", "health": 150, "attack": 20, "gold": 100, "exp": 150}
     ]
-    # Randomly select an enemy type
+    # Randomly select an enemy type from the list
     enemy_type = random.choice(enemies)
-    # Calculate level multiplier based on player's level
+    # Scale enemy attributes based on the player's level
     level_multiplier = (player_level + random.randint(0, 2)) / 2
     # Create and return a new Enemy instance with scaled attributes
     return Enemy(
@@ -106,15 +110,16 @@ def create_enemy(player_level):
         int(enemy_type["exp"] * level_multiplier)
     )
 
+# Function to handle the battle between the player and an enemy
 def battle(player, enemy):
     print(f"A level {enemy.attack // 5} {enemy.name} appears!")
     
     while player.is_alive() and enemy.is_alive():
-        # Display current stats
+        # Display current stats for both player and enemy
         print("\n" + player.get_stats())
         print(f"{enemy.name} - Health: {enemy.health}")
         
-        # Get player action
+        # Get player action input
         action = input("Do you want to [a]ttack, [d]efend, or [r]un? ").lower()
         
         if action == 'a':
@@ -141,7 +146,7 @@ def battle(player, enemy):
             player.take_damage(enemy_damage)
             print(f"You defend against the {enemy.name}'s attack, reducing the damage to {enemy_damage}.")
         elif action == 'r':
-            # Player attempts to run away
+            # Player attempts to run away with a chance of success
             if random.random() < 0.5:
                 print("You successfully run away!")
                 return False
@@ -157,6 +162,7 @@ def battle(player, enemy):
     
     return False
 
+# Function to handle exploration events (healing, finding treasures, etc.)
 def explore(player):
     # Define possible exploration events
     events = [
@@ -187,6 +193,7 @@ def explore(player):
 
     time.sleep(1)  # Add a short delay for readability
 
+# Main function that runs the game
 def main():
     print("Welcome to the Expanded Text RPG!")
     player = create_character()
