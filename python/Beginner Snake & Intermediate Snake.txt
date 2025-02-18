@@ -1,0 +1,61 @@
+Beginner Snake & Intermediate Snake VS Advanced Snake
+
+Here are the key differences:
+
+Control Scheme:
+Advanced Snake: Uses both WASD and arrow keys for control.
+Beginner/Intermediate: Uses only arrow keys.
+
+Scoring System:
+Advanced Snake: Implements a scoring system with a visible score display.
+Beginner/Intermediate: Doesn't have a scoring system.
+
+Game Speed:
+Attached game: Increases speed as the score increases.
+Beginner/Intermediate: Maintains a constant speed.
+
+Screen Setup:
+Attached game: Uses a 600x600 window.
+Beginner/Intermediate: Uses a 400x400 window.
+
+Game Over Mechanics:
+Attached game: Has a kill_snake() function that turns segments red, then hides them before resetting.
+Beginner/Intermediate: Simply resets the snake to the starting position without visual effects.
+
+Collision Detection:
+Attached game: Checks for collisions with walls and self.
+Beginner/Intermediate: Only checks for collisions with walls.
+
+Food Size:
+Attached game: Uses a smaller food size (0.5, 0.5).
+Beginner/Intermediate: Uses the default size for food.
+
+Snake Growth:
+Attached game: Creates new segments by cloning the head.
+Beginner/Intermediate: Creates new segments as separate turtles.
+
+
+Movement Logic:
+Attached game: Updates segment positions in the move() function.
+Beginner/Intermediate: Updates segment positions in the main game loop.
+
+
+Variable Names and Structure:
+
+The attached game uses different variable names (e.g., snake_win vs screen).
+The overall structure and organization of functions differ slightly.
+
+
+Error in Direction Setting:
+
+The attached game has an error in the move_right and move_left functions, where the directions are reversed.
+
+
+Game Loop:
+
+The attached game uses a while playing loop with a delay variable.
+Our game uses an infinite while True loop with time.sleep().
+
+
+
+The attached game is more feature-rich, with scoring, progressive difficulty, and better visual feedback for game over. However, it also contains a bug in the left/right movement functions. Our game is simpler but lacks some of these advanced features.
