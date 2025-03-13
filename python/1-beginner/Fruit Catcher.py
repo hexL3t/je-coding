@@ -183,3 +183,6 @@ score_display.goto(0, 0)  # Move to the center of the screen
 score_display.write("GAME OVER!", align="center", font=("Arial", 36, "bold"))  # Display game over message
 
 screen.mainloop()  # Keep the screen open until manually closed
+
+
+#########
