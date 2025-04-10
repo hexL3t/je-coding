@@ -1,3 +1,5 @@
+https://hackr.io/blog/cpp-projects
+
 Write new projects for C++
 Make sure there are comments
 Write new projects for C++
