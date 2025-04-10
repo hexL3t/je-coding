@@ -46,3 +46,10 @@ int main(){
     }
     return 0;   
 }
+
+/* 
+When you run this C++ program, it will prompt you to input 
+two numbers before asking you to choose an arithmetic operation. 
+
+Foundation project, to make as many changes as you'd like.
+*/
