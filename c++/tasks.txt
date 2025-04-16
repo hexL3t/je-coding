@@ -1,4 +1,5 @@
 https://hackr.io/blog/cpp-projects
+https://chatgpt.com/canvas/shared/67f76e698ab88191863c04a05d726770
 
 Write new projects for C++
 Make sure there are comments
