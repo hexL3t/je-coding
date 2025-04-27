@@ -58,12 +58,12 @@ Fill in the blanks to make your program!
 
 ## 🔍 Label the Program
 Match each part of this code to its purpose:
-| Code                            | Labels to Match   |
-| -------------                   | -------------     |
-| ``` #include <iostream> ```     | 1. Main Function  | 
-| ``` using namespace std ```     | 2. Print Statement  | 
-| ``` int main() { ```     | 3. End of Program  | 
-| ``` cout << "I like Pizza!" << endl; ```     | 4. Include Tools  | 
-| ``` return 0; ```     | 5. Use Standard Library  | 
-| ``` } ```     | 5. Use Standard Library  | 
+| Code                                         | Labels to Match          |
+| -------------                                | -------------            |
+| ``` #include <iostream> ```                  | 1. Main Function         | 
+| ``` using namespace std ```                  | 2. Print Statement       | 
+| ``` int main() { ```                         | 3. End of Program        | 
+| ``` cout << "I like Pizza!" << endl; ```     | 4. Include Tools         | 
+| ``` return 0; ```                            | 5. Use Standard Library  | 
+| ``` } ```                                    | 5. Use Standard Library  | 
 
