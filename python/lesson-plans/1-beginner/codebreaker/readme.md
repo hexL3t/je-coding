@@ -1,6 +1,7 @@
 # 🌟 Project 1: Codebreaker Game (Mini Cipher)
 ## 🔥 Project Overview:
 In this project, you will create a Codebreaker Game based on a Caesar Cipher — one of the oldest and simplest forms of encryption.
+
 You will learn how to manipulate strings, use loops, work with conditionals, and handle arrays (lists in Python).
 
 ## 🧠 Concepts Covered:
@@ -20,7 +21,7 @@ You will learn how to manipulate strings, use loops, work with conditionals, and
 2. Encrypts the message by shifting each letter.
 3. Decrypts it by reversing the shift.
 
-====
+
 # 🔓 Extension: Brute Force Cracker
 What if you don't know the shift?
 
@@ -31,16 +32,17 @@ This extension adds a function that will try every possible shift and prints out
 2. Decrypts the cipher text with each shift.
 3. Prints all possible decoded messages so you can spot the correct one!
 
-===
 # ✏️ Summary:
 You built a mini cipher machine capable of:
 * Encrypting and decrypting messages
 * Brute-forcing unknown ciphers
 * Practicing key programming concepts in a fun way
 
-====
 # 💡 Extra Challenges (TO BE LOOKED INTO):
-⋅⋅⋅🔎 Hint System: If a user inputs a wrong guess, give them hints ("The shift is higher!" or "lower!").
-⋅⋅⋅🚫 Invalid Input Detection: Warn if they enter numbers or symbols inside the message.
-⋅⋅⋅🛡️ Auto-Detect Language: Guess the right decryption by checking for common English words.
-⋅⋅⋅🎨 UI Upgrade: Turn the game into a simple GUI (Graphical User Interface) using a library like Tkinter!
+🔎 Hint System: If a user inputs a wrong guess, give them hints ("The shift is higher!" or "lower!").
+
+🚫 Invalid Input Detection: Warn if they enter numbers or symbols inside the message.
+
+🛡️ Auto-Detect Language: Guess the right decryption by checking for common English words.
+
+🎨 UI Upgrade: Turn the game into a simple GUI (Graphical User Interface) using a library like Tkinter!
