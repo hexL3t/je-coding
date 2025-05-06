@@ -1,68 +1,79 @@
-# 🧹 First, we import a library that lets us pick random numbers
+# 🧹 First, we import a special toolbox (called a "library") that helps us do random stuff
 import random
 
-# 🎲 This function "rolls" a dice by picking a random number between 1 and 6
+# 🎲 This function is like a dice roller machine
+# It randomly picks a number between 1 and 6 — just like rolling a real die!
 def roll_dice():
-    return random.randint(1, 6)
+    return random.randint(1, 6)  # 🌀 randint() means "random integer" between two numbers
 
-# ⚔️ This function plays a full 5-round battle!
+# ⚡ This function plays one quick round of the dice game
+def quick_match():
+    # 🧍‍♂️ The player takes their turn and rolls the dice
+    player_roll = roll_dice()
+
+    # 🤖 The computer (CPU) also rolls the dice for its turn
+    cpu_roll = roll_dice()
+
+    # 🗣️ Let's tell the player what both rolls were
+    print("\n🎲 You rolled:", player_roll)
+    print("🤖 CPU rolled:", cpu_roll)
+
+    # 🧠 Time to figure out who won the round!
+    if player_roll > cpu_roll:
+        print("✅ You win!")   # 🏅 If your number is bigger, you win!
+    elif cpu_roll > player_roll:
+        print("❌ CPU wins!")  # 💻 If the computer’s number is bigger, it wins!
+    else:
+        print("⚔️ It's a tie!") # 🫱🫲 If both numbers are the same, it's a tie — no winner this time
+
+# ⚔️ This function plays a full 5-round battle between the player and the CPU
 def full_battle():
-    rounds = 5            # 🧮 How many rounds we will play
+    rounds = 5             # 🧮 How many rounds we will play
     player_score = 0       # 🧍‍♂️ Player's starting score
     cpu_score = 0          # 🤖 CPU's starting score
 
-    # 🔁 Play 5 rounds
+    # 🔁 Play the game for 5 rounds using a loop
     for round_num in range(1, rounds + 1):
         print(f"\n--- Round {round_num} ---")
-        
-        # 🎲 Each player rolls TWO dice
-        p1 = roll_dice()
-        p2 = roll_dice()
-        c1 = roll_dice()
-        c2 = roll_dice()
 
-        # ➕ Add the two dice together
+        # 🎲 Each side rolls TWO dice (for more excitement!)
+        p1 = roll_dice()   # First roll for player
+        p2 = roll_dice()   # Second roll for player
+        c1 = roll_dice()   # First roll for CPU
+        c2 = roll_dice()   # Second roll for CPU
+
+        # ➕ Add both dice to get the total for each side
         player_total = p1 + p2
         cpu_total = c1 + c2
 
-        # 📢 Show the rolls
+        # 📢 Show the results of the dice rolls
         print(f"You rolled: {p1} + {p2} = {player_total}")
         print(f"CPU rolled: {c1} + {c2} = {cpu_total}")
 
-        # 🏆 Who wins the round?
+        # 🏆 Decide who wins this round and update scores
         if player_total > cpu_total:
             print("✅ You win this round!")
-            player_score += 1   # 🧍‍♂️ Add a point for the player
+            player_score += 1  # ✨ Give the player a point
         elif cpu_total > player_total:
             print("❌ CPU wins this round!")
-            cpu_score += 1      # 🤖 Add a point for the CPU
+            cpu_score += 1     # ✨ Give the CPU a point
         else:
-            print("⚔️ It's a tie this round!") # No points for tie
+            print("⚔️ It's a tie this round!")  # No points for either side
 
-    # 🏁 After all rounds, who won the whole game?
-    print("\n=== Final Scores ===")
+    # 🏁 After all 5 rounds, let's show the final scores
+    print("\n=== 🧮 Final Scores ===")
     print(f"You: {player_score} | CPU: {cpu_score}")
 
+    # 🎉 Announce the overall winner of the 5-round battle
     if player_score > cpu_score:
-        print("🎉 YOU WIN THE BATTLE!")
+        print("🎉 YOU WIN THE BATTLE!")  # 🏅 Player wins more rounds
     elif cpu_score > player_score:
-        print("🤖 CPU WINS THE BATTLE!")
+        print("🤖 CPU WINS THE BATTLE!") # 🥲 CPU wins more rounds
     else:
-        print("⚔️ IT'S A FINAL TIE!")
+        print("⚔️ IT'S A FINAL TIE!")    # 💥 Same number of wins
 
-# 🧍‍♂️ vs 🤖 Quick single roll game
-player_roll = roll_dice()
-cpu_roll = roll_dice()
+# 🚀 Let's play one round of the game!
+quick_match()
 
-print("\n🎲 You rolled:", player_roll)
-print("🤖 CPU rolled:", cpu_roll)
-
-if player_roll > cpu_roll:
-    print("✅ You win!")
-elif cpu_roll > player_roll:
-    print("❌ CPU wins!")
-else:
-    print("⚔️ It's a tie!")
-
-# 🎮 Now let's play the full battle too!
+# 🎮 Now let's play the full 5-round battle!
 full_battle()
