@@ -1,0 +1,10 @@
+What is 9 + 10? |19
+What is the capital of France? |Paris
+How many legs does a spider have? |8
+What planet is known as the Red Planet? |Mars
+What gas do humans need to breathe? |Oxygen
+What is the capital of Japan?|Tokyo
+What is 5 multiplied by 6?|30
+What does CPU stand for?|Central Processing Unit
+What is the boiling point of water in Celsius?|100
+Which element has the chemical symbol 'O'?|Oxygen
