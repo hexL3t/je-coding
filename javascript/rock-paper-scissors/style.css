@@ -1,0 +1,121 @@
+/* Import Google font - Plus Jakarta Sans */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* STEP THREE */
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     background: #f6f6f6;
+}
+
+.container {
+    background: #ffffff;
+    padding: 2rem 7rem;
+    border-radius: 14px;
+    box-shadow:  0 5px 10px rgba(0,0,0, 0.1);
+}
+
+.result-images{
+    display: flex;
+    column-gap: 7rem;
+}
+
+/* STEP TWO */
+.result-images img {
+    width: 100px;
+}
+
+/* STEP FOUR */
+.user-result img {
+    transform: rotate(90deg);
+}
+
+.cpu-result img {
+    transform: rotate(-90deg) rotateY(180deg);
+}
+
+/* STEP SIX */
+.result {
+    text-align: center;
+    font-size: 2rem;
+    color: #7d2ae8;
+    margin-top: 1.5rem;
+}
+
+/* STEP EIGHT */
+.option-img img{
+    width: 50px;
+}
+
+/* STEP NINE */
+.option-images {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    justify-content: space-between;
+}
+
+.option-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.option-img:hover {
+    opacity: 1;
+}
+
+.option-img img {
+    pointer-events: none;
+}
+
+.option-img p {
+    color: #7d2ae8;
+    font-size: 1.235rem;
+    margin-top: 1rem;
+    pointer-events: none;
+}
+
+/* STEP 12 */
+.option-img.active {
+    opacity: 1;
+}
+
+/* STEP 13 */
+.container.start .user-result{
+    animation: userShake 0.7s ease infinite;
+    transform-origin:  left;
+}
+
+@keyframes userShake{
+    50% {
+        transform: rotate(10deg);
+    }
+}
+.container.start .cpu-result{
+    animation: cpuShake 0.7s ease infinite;
+    transform-origin:  right;
+}
+
+@keyframes cpuShake{
+    50% {
+        transform: rotate(-10deg);
+    }
+}
+
+/* STEP 14 */
+.container.start .option-images {
+    pointer-events: none;   
+}
