@@ -8,4 +8,48 @@
     font-family: "Plus Jakarta Sans", sans-serif;
 }
 
-/* We'll style the body and container in the next step */
+/* STEP 3: Center the container */
+body {
+    height: 100vh; /* Full screen height */
+    display: flex; /* Enable Flexbox */
+    align-items: center; /* Vertically center */
+    justify-content: center; /* Horizontally center */
+    background: #f6f6f6; /* Light grey background */
+}
+
+/* STEP 3: Style the main container box */
+.container {
+    background: #ffffff; /* White background */
+    padding: 2rem 7rem; /* Inner space */
+    border-radius: 14px; /* Rounded corners */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* STEP 3: Layout user and CPU images side by side */
+.result-images {
+    display: flex;
+    column-gap: 7rem; /* Space between user and CPU */
+}
+
+/* STEP 3: Set default image size */
+.result-images img {
+    width: 100px;
+}
+
+/* STEP 3: Rotate user and CPU images to face each other */
+.user-result img {
+    transform: rotate(90deg);
+}
+
+.cpu-result img {
+    transform: rotate(-90deg) rotateY(180deg);
+}
+
+/* STEP 3: Style the result message */
+.result {
+    text-align: center;
+    font-size: 2rem;
+    color: #7d2ae8;
+    margin-top: 1.5rem;
+}
+
