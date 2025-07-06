@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Clock | Tia</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Remixicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+</head>
+<body>
+    <!-- Digital Clock-->
+    <div class="digital-clock">
+        <i class="ri-more-2-line dot-menu-btn"></i>
+        <!-- Toggle -->
+        <ul class="dot-menu">
+            <li class="menu-item">
+                <span class="clock-format-text">24-hour format</span>
+                <div class="format-switch-btn" data-format="12"></div>
+            </li>
+            <!-- City Selector Dropdown -->
+            <li class="menu-item">
+                <select class="city-selector">
+                    <option value="Australia/Brisbane">Brisbane</option>
+                    <option value="Australia/Sydney">Sydney</option>
+                </select>
+            </li>
+        </ul>
+
+         <!-- Time Display -->
+        <div class="time">
+            <span class="hours" id="selected-time">00</span>
+            <span class="dots">:</span>
+            <span class="minutes" id="selected-minutes">00</span>
+            <div class="right-side">
+                <span class="period" id="selected-period">AM</span>
+                <span class="seconds" id="selected-seconds">00</span>
+            </div>
+        </div>
+        <!-- Calendar (Date) -->
+        <div class="calendar">
+            <span class="day-name" id="selected-day-name">Day</span>
+            <span class="day-number" id="selected-day-number">00</span>
+            <span class="month-name" id="selected-month-name">Month</span>
+            <span class="year" id="selected-year">0000</span>
+        </div>
+
+        <!-- Display the selected city -->
+        <div class="selected-city" id="selected-city">Brisbane</div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
