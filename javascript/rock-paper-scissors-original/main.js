@@ -14,12 +14,12 @@ optionImages.forEach((image, index) => {
         image.classList.add("active");
 
         // STEP 15
-        userResult.src = "images/rock.png";
-        cpuResult.src = "images/rock.png";
-        result.textContent = "Wait....";
+       // userResult.src = "images/rock.png";
+        //cpuResult.src = "images/rock.png";
+       // result.textContent = "Wait....";
 
         // Loop through each option image again : STEP 13
-        optionImages.forEach((image2, index2) => {
+       optionImages.forEach((image2, index2) => {
             //If the current index doesn't match the clicked index
             // Remove the "active" class from the other option images
             index !== index2 && image2.classList.remove("active");
@@ -32,7 +32,7 @@ optionImages.forEach((image, index) => {
         // Set a timeout to delay the result calculation, wrap the below in a timeOut()
         let time = setTimeout(() => {
             // STEP 13
-            gameContainer.classList.remove("start");
+        gameContainer.classList.remove("start");
         
             // STEP 11
         // Get the source of the clicked option image
@@ -70,7 +70,8 @@ optionImages.forEach((image, index) => {
         let outcomeValue = outcomes[userValue + cpuValue];
 
         // Display the result
-        result.textContent = userValue == cpuValue ? "Match Draw" : `${outcomeValue} Won!!`;
+        result.textContent = userValue == cpuValue ? "Match Draw" 
+        : `${outcomeValue} Won!!`;
         }, 2500);
     });
 });

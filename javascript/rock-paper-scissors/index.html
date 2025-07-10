@@ -11,30 +11,39 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- STEP 2: Main game container -->
+    <!-- 2.: Main game container -->
     <section class="container">
-        
-        <!-- Result section showing user vs CPU images -->
+        <!-- Result section showing user vs computer images -->
         <div class="result-field">
-
-            <!-- STEP 2A: Images for player and CPU choices -->
+            <!-- 3. Images for player and computer choices -->
             <div class="result-images">
                 <span class="user-result">
-                    <img src="images/rock.png" alt="rock">
+                    <img src="images/rock.png" alt="User Choice">
                 </span>
-                <span class="cpu-result">
-                    <img src="images/paper.png" alt="paper">
-                </span>
-                <span class="cpu-result">
-                    <img src="images/scissors.png" alt="scissors">
+                <span class="computer-result">
+                    <img src="images/paper.png" alt="Computer Choice">
                 </span>
             </div>
-
-            <!-- STEP 2B: Placeholder result text -->
+            <!-- 4. Placeholder result text -->
             <div class="result">Let's Play!!</div>
         </div>
-        
+        <!-- 5. Add Option Images-->
+        <div class="option-images">
+            <span class="option-img">
+                <img src="images/rock.png" alt="Rock Hand">
+                <p>Rock</p>
+            </span>
+            <span class="option-img">
+                <img src="images/paper.png" alt="Paper Hand">
+                <p>Paper</p>
+            </span>
+            <span class="option-img">
+                <img src="images/scissors.png" alt="Scissors Hand">
+                <p>Scissors</p>
+            </span>
+        </div>
     </section>
+    <!--6. Link Javascript File -->
+    <script src="main.js" defer></script>
 </body>
-
 </html>

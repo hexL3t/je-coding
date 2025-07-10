@@ -93,7 +93,7 @@ body {
     opacity: 1;
 }
 
-/* STEP 13 */
+/* STEP 13 
 .container.start .user-result{
     animation: userShake 0.7s ease infinite;
     transform-origin:  left;
@@ -115,7 +115,7 @@ body {
     }
 }
 
-/* STEP 14 */
+/* STEP 14 
 .container.start .option-images {
     pointer-events: none;   
 }
