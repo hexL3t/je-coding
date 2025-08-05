@@ -1,0 +1,270 @@
+/*====== Global Styles ======*/
+* {
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+/*====== Body Styling ======*/
+body {
+   min-height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: #2e2e44;
+}
+
+/* ====== Main Digital Clock Container ====== */
+.digital-clock {
+   position: relative;
+   color: #ffffff;
+   background: #2d2f41;
+   width: 425px;
+   padding: 20px 45px;
+   box-shadow: 0 5px 25px rgba(14, 21, 37, 0.8);
+   border-radius: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+/* ====== Glowing Border Effect ====== */
+.digital-clock::before {
+    content: '';
+    position: absolute;
+    background: -webkit-linear-gradient(45deg, #24ff6d, #2f93f1, #ff5e9a);
+    background-size: 200%, 200%;
+    top: -5px;
+    left: -5px;
+    bottom: -5px;
+    right: -5px;
+    z-index: -1;
+    filter: blur(40px);                                                          
+    animation: glowing 10s ease infinite;                                         
+}
+
+/* ====== Glowing Animation Keyframes ====== */
+@keyframes glowing {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    0% {
+        background-position: 0 50%;
+    }
+}
+
+/* ====== Time Display Container ====== */
+.time {
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+/* ====== Shared Time Styles ====== */
+.hours, .dots, .minutes {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-weight: 600;
+   padding: 0 10px;
+   line-height: 125px;
+}
+
+/* ====== Hour and Minute Styles ====== */
+.hours, .minutes {
+   font-size: 6.5rem;
+   width: 125px;
+}
+
+/* ====== Colon Separator (:) ====== */
+.dots {
+   font-size: 5rem;
+   color: #929292;
+}
+
+/* ====== Gradient Text Styles ====== */
+.hours {
+    background: -webkit-linear-gradient(90deg, #634dff, #5fd4ff);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.minutes {
+    background: -webkit-linear-gradient(90deg, #ff5e9a, #ffb960);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+/* ====== AM/PM and Seconds Container ====== */
+.right-side {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+/* ====== AM/PM and Seconds Text ====== */
+.period, .seconds {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* ====== AM/PM Gradient Style ====== */
+.period {
+    transform: translateY(-20px);
+    background: -webkit-linear-gradient(90deg, #f7b63f, #faf879);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+/* ====== Seconds Gradient Style ====== */
+.seconds {
+    transform: translateY(16px);
+    background: -webkit-linear-gradient(90deg, #2dff6d, #2f93f1);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+/* ====== Date Display Styling ====== */
+.calendar {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 1.3rem;
+   font-weight: 500;
+   margin-bottom: 5px;
+   background: -webkit-linear-gradient(90deg, #ae4af6, #ff98d1);
+   -webkit-text-fill-color: transparent;
+   -webkit-background-clip: text;
+   column-gap: 0.5rem;
+}
+
+/* ====== Dot Menu Button (Top Right) ====== */
+.dot-menu-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    color: #efefef;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* ====== Hidden Dot Menu List ====== */
+.dot-menu {
+  z-index: 1000;
+  list-style: none;
+  box-shadow: 0 5px 25px rgba(0,0,0, 0.5);
+  position: absolute;
+  top: 7px;
+  right: 5px;
+  background: #353e54;
+  border-radius: 5px;
+  padding: 10px 20px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+/* ====== Show Menu When Active ====== */
+.dot-menu.active {
+ visibility: visible;
+ opacity: 1;
+}
+
+/* ====== Dot Menu Items ====== */
+.menu-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ====== Text Label for Clock Format Toggle ====== */
+.clock-format-text {
+    color: #efefef;
+    font-size: 0.9em;
+    margin-right: 20px;
+}
+
+/* ====== Toggle Switch Container ====== */
+.format-switch-btn {
+    width: 35px;
+    height: 15px;
+    background: #485470;
+    border-radius: 75px;
+    box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+                inset -2px -2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* ====== Toggle Switch Circle ====== */
+.format-switch-btn:before {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #ff5e9a;
+    border-radius: 50%;
+    box-shadow: 0 5px 25px #ff5e9a;
+    transform: translateX(-10px);
+    transition: 0.3s ease;
+    transition-property: background, transform;
+}
+
+/* ====== Toggle Active State (Green Circle Right) ====== */
+.format-switch-btn.active:before {
+    background: #0bff8d;
+    box-shadow: 0 5px 25px #0bff8d;
+    transform: translateX(10px);
+}
+
+/* ====== City Selector Dropdown ====== */
+.city-selector {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 8px 15px;
+  background: #353e54;
+  color: #ffffff;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* ====== City Selector Hover/Focus Effects ====== */
+.city-selector:hover,
+.city-selector:focus {
+    background-color: #5fd4ff;
+}
+
+/* ====== Dropdown Option Styling ====== */
+.city-selector option {
+    background: #353e54;
+    color: #ffffff;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+
+/* ====== Active State for Dropdown (Click) ====== */
+.city-selector:active {
+    background-color: #5fd4ff;
+}

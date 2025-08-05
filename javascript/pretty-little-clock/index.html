@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>JS Game | Pretty Little Clock </title>
+
+    <!-- Link your stylesheet here -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Remixicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+</head>
+<body>
+    <!-- Digital Clock : Main Box -->
+    <div class="digital-clock">
+
+        <!-- Options Menu -->
+        <i class="ri-more-2-line dot-menu-btn"></i>
+
+        <!-- Toggle : The menu that opens -->
+        <ul class="dot-menu">
+            <li class="menu-item">
+            <!-- Change between 12-hour and 24-hour -->
+                <span class="clock-format-text">24-hour format</span>
+                <div class="format-switch-btn" data-format="12"></div>
+            </li>
+            <!-- City Selector Dropdown -->
+            <li class="menu-item">
+            <!-- Change between different cities (clickable) -->
+                <select class="city-selector">
+                    <option value="Australia/Brisbane">Brisbane</option>
+                    <option value="Australia/Adelaide">Adelaide</option>
+                </select>
+            </li>
+        </ul>
+
+        <!-- Time Display : Show the Clock --->
+        <div class="time">
+            <span class="hours" id="selected-time">00</span>
+            <span class="dots">:</span>
+            <span class="minutes" id="selected-minutes">00</span>
+
+            <!-- Morning or Afternoon? -->
+            <div class="right-side">
+                <span class="period" id="selected-period">AM</span>
+                <span class="seconds" id="selected-seconds">00</span>
+            </div>
+        </div>
+
+        <!-- Calendar : Shows Date -->
+        <div class="calendar">
+            <!-- Day Name : eg. Tuesday -->
+            <span class="day-name" id="selected-day-name">Day</span>
+            <!-- Day Number : eg. 1, 2 -->
+            <span class="day-number" id="selected-day-number">00</span>
+            <!-- Month -->
+            <span class="month-name" id="selected-month-name">Month</span>
+            <!-- Year -->
+            <span class="year" id="selected-year">0000</span>
+        </div>
+
+        <!-- The Location : Display Selected City -->
+        <div class="selected-city" id="selected-city">Brisbane</div>
+
+    </div>
+ 
+    <!-- Link Javascript File -->
+   <script src="/main.js" defer></script>
+</body>
+</html>
