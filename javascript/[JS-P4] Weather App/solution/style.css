@@ -1,0 +1,167 @@
+/* Import Google Font 'Poppins' so we can use it in our document */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* -------- Global Styles -------- */
+/* The * (asterisk) selector targets ALL elements on the page */
+* {
+    margin: 0;                              /* Removes default space outside elements */
+    padding: 0;                             /* Removes default space inside elements */
+    font-family: "Poppins", sans-serif;     /* Sets the font for all text */
+    box-sizing: border-box;                 /* Ensures padding & borders are included in element width/height */
+}
+
+
+/* -------- Body Background & Layout -------- */
+body {
+    background: #6dd5ed;                  /* Sets a light blue background color for the whole page */
+    flex-direction: column;                 /* Arranges content in a vertical column (when using flexbox) */
+    height: 100vh;                          /* Makes the body fill the entire height of the screen */
+    text-align: center;                     /* Centers all text horizontally inside the body */
+
+    transition: background 0.8s ease;        /* Smooth background change when weather changes */
+}
+
+/* -------- Reusable Style: Flex -------- */
+/* The .flex class can be added to any element to quickly center its content */
+.flex {
+    display: flex;                          /* Turns on Flexbox layout */
+    align-items: center;                    /* Centers items vertically */
+    justify-content: center;                /* Centers items horizontally */
+}
+
+
+/* Make all images fill the space of their container */
+img {
+    width: 100%;   /* Image takes full width of its parent */
+    height: 100%;  /* Image takes full height of its parent */
+}
+
+/* -------- Title Styling -------- */
+.title h1 {
+    font-size: 26px;  /* Sets the size of the heading text */
+    color: #ffffff;   /* White color for the text */
+    margin-bottom: 15px;  /* Space below the heading */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);  /* Adds a subtle shadow to make text pop */
+}
+
+/* -------- Search Bar Styling -------- */
+.search {
+    width: 100%;                   /* Search bar takes full width of parent */
+    justify-content: space-between; /* Spaces out items inside the search bar */
+}
+
+/* Resize the image inside the search button */
+.search button img {
+    width: 25px;  /* Makes the search icon smaller inside the button */
+}
+
+/* Style the search button */
+.search button {
+    width: 55px;            /* Width of the circular button */
+    height: 55px;           /* Height of the circular button */
+    cursor: pointer;        /* Changes cursor to pointer on hover */
+    border-radius: 50%;     /* Makes the button perfectly round */
+    transition: all 0.3 ease; /* Smoothly animates all property changes over 0.3 seconds */
+}
+
+/* Hover effect on search button */
+.search button:hover {
+    background: rgba(255, 255, 255, 0.5);  /* Makes the button slightly more opaque on hover */
+    transform: scale(1.1);                  /* Slightly enlarges the button to give a zoom effect */
+}
+
+/* Apply shared styles to both search button and input */
+.search button,
+.search input {
+    border: 0;                             /* Removes default border */
+    outline: 0;                            /* Removes outline when clicked or focused */
+    background: rgba(255, 255, 255, 0.3);  /* Semi-transparent white background */
+}
+
+/* Style the search input specifically */
+.search input {
+    width: 100%;           /* Make the input take the full width of its container */
+    padding: 10px 20px;    /* Adds space inside the input for comfortable typing */
+    height: 50px;          /* Sets the height of the input box */
+    border-radius: 10px;   /* Rounds the corners of the input */
+    flex: 1;               /* Allows the input to expand and fill available space */
+    margin-right: 16px;    /* Adds space between input and button */
+    font-size: 18px;       /* Makes the text inside readable */
+    
+    transition: all 0.3s ease;  /* Smoothly animates all property changes over 0.3 seconds */
+}
+
+/* Style the placeholder text inside the input */
+.search input::placeholder {
+    color: rgba(0, 0, 0, 0.8);  /* Dark grey color for placeholder text */
+}
+
+/* Add visual effect when the input is focused (clicked into) */
+.search input:focus {
+    box-shadow: 0 0 10px rgba(255,255,255,0.5); /* Glowing effect around input */
+}
+
+/* -------- Weather Icon & Text Styling -------- */
+.weather-icon {
+    width: 100px;      /* Sets the size of the weather icon */
+    margin-top: 30px;  /* Adds space above the icon */
+    transition: transform 0.3s ease;  /* Smoothly animates any transform changes (like scaling or moving) over 0.3 seconds */
+}
+
+.weather h1,
+.weather h2 {
+    transition: all 0.3s ease;    /* Smoothly animates all property changes of the .weather element over 0.3 seconds */
+}
+
+.weather h1 {
+    font-size: 50px;   /* Makes the temperature text large */
+    font-weight: 500;  /* Medium boldness for the temperature */
+    margin-top: 15px;  /* Adds space above the temperature */
+}
+
+.weather h2 {
+    font-size: 40px;   /* Sets the city name text size */
+    font-weight: 400;  /* Normal weight for the city name */
+    margin-top: 10px;  /* Adds space above the city name */
+}
+
+/* -------- Details Section -------- */
+.details {
+    justify-content: space-between;  /* Space out the humidity and wind columns evenly */
+    padding: 0 20px;                 /* Adds horizontal padding on left and right */
+    margin-top: 50px;                /* Adds space above the details section */
+}
+
+/* -------- Column Layout -------- */
+.col {
+    text-align: left;                /* Align text and numbers to the left inside each column */
+}
+
+.col img {
+    width: 40px;                      /* Sets the size of the humidity/wind icons */
+    margin-right: 10px;               /* Adds space between the icon and its number/label */
+}
+
+/* -------- Humidity & Wind Numbers -------- */
+.humidity,
+.wind {
+    font-size: 28px;                  /* Makes the numbers large and readable */
+    margin-top: -5px;                 /* Adjusts spacing so numbers sit closer to icons */
+    transition: all 0.3s ease;  /* Smoothly animates all property changes over 0.3 seconds */
+}
+
+/* -------- Card Styling -------- */
+.card {
+    width: 90%;                        /* Makes the card take 90% of the container width */
+    max-width: 500px;                  /* Limits the card width to 500px on larger screens */
+    margin-top: 20px;                  /* Adds space above the card */
+    border-radius: 20px;               /* Rounds the corners of the card */
+    padding: 40px 35px;                /* Adds space inside the card for its content */
+    text-align: center;                /* Centers the text and elements inside the card */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2); /* Adds a soft shadow to give the card depth */
+
+    background: rgba(255, 255, 255, 0.15);       /* Semi-transparent white background for a frosted effect */
+    backdrop-filter: blur(12px);                /* Blurs the content behind this element for a glass-like look */
+    -webkit-backdrop-filter: blur(12px);        /* Safari/Chrome prefix for the backdrop blur effect */
+    transition: transform 0.3s ease, background 0.5s ease;  /* Smoothly animates transform changes over 0.3s and background changes over 0.5s */
+}

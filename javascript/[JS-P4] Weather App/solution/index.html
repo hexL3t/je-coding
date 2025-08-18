@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- This makes the site responsive for all devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather App</title>
+
+    <!-- Link the CSS file for styling -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<!-- The body uses the "flex" class so everything inside is centered on the page -->
+<body class="flex">
+    
+    <!-- Section Title: This section holds the heading at the top -->
+     <section class="title">
+        <!-- Main heading for the page -->
+        <h1>Weather App using JavaScript</h1>
+     </section>
+
+    <section class="flex">
+        <!-- Container div for styling purposes -->
+        <div class="card">
+            <!-- Search box container -->
+            <div class="search flex">
+                <!-- Text input where user can type a city name; spellcheck is turned off so the browser does not underline city names as misspelled -->
+                <input type="text" placeholder="Enter City Name" spellcheck="false">
+                <!-- Button to trigger the search -->
+                <button class="flex">
+                    <!-- Search icon inside the button -->
+                    <img src="/img/search-svgrepo-com.svg" alt="Search Icon">
+                </button>
+            </div>
+
+            <!-- Weather Details Card: This section will show the current weather information -->
+            <div class="weather-details">
+
+                <!-- Top Weather Section: Contains the weather icon, temperature, and city name -->
+                <div class="weather">
+                    <!-- Icon representing the current weather (e.g., rain, sun, snow) -->
+                    <img src="/img/rain-svgrepo-com.svg" class="weather-icon">
+
+                    <!-- Temperature display -->
+                    <h1 class="temp">22°C</h1>
+
+                    <!-- City name display -->
+                    <h2 class="city">Brisbane</h2>
+                </div>
+
+                <!-- Bottom Weather Details: Shows Humidity and Wind Speed -->
+                <div class="details flex">
+
+                    <!-- Humidity Column -->
+                    <div class="col flex">
+                        <!-- Icon representing humidity -->
+                        <img src="/img/humidity-svgrepo-com.svg" alt="humidity icon">
+                        <div>
+                            <!-- Actual Humidity Value -->
+                            <p class="humidity">50%</p>
+                            <!-- Label for the value -->
+                            <p>Humidity</p>
+                        </div>
+                    </div>
+
+                    <!-- Wind Column -->
+                    <div class="col flex">
+                        <!-- Icon representing wind -->
+                        <img src="/img/wind-svgrepo-com.svg" alt="wind icon">
+                        <div>
+                            <!-- Actual Wind Speed Value -->
+                            <p class="wind">08 km/h</p>
+                            <!-- Label for the value -->
+                            <p>Wind Speed</p>
+                        </div>
+                    </div>
+
+                </div>
+
+             </div>
+
+        </div>
+
+    </section>
+
+    <!-- Link JavaScript File -->
+    <script src="/script.js"></script>
+
+</body>
+</html>
